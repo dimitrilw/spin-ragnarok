@@ -12,6 +12,10 @@ Basically, I am using this repo as a dumping-ground for Spin-related experiments
 I'm just goofing around here, making chaos. And just like "Thor: Ragnarok"
 may have reinvented the look-n-feel of the MCU, I believe that Spin may herald
 changes to the experience of building & deploying WASM cloud functions.
+
+In addition, I hope that my playtime with this repo will help ascend
+my Spin-skills, much like Thor's journey in the movie.
+
 Let Ragnarok begin!
 
 ![Spin Ragnarok](static/spin-ragnarok.png)
