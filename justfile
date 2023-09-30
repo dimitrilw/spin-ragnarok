@@ -18,3 +18,16 @@
 # Deploy the app to the cloud.
 @deploy: build
     spin deploy
+
+# Gather stats about the app's code size & todos.
+@stats:
+    ( \
+        echo "\nTokei\n"; \
+        tokei; \
+        echo "\nTCount\n"; \
+        tcount; \
+        NUM=$(rg TODO -g "!justfile" -g "!stats.txt" | wc -l | tr -s ' '); \
+        echo "\n################################################################################"; \
+        echo "\nTodo: $NUM\n"; \
+        rg TODO -g "!justfile" -g "!stats.txt"; \
+    ) > stats.txt && bat stats.txt
