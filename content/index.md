@@ -27,7 +27,7 @@ description = "The Micro-CMS for WebAssembly and Spin"
 # here. The format must be `string` keys with `string` values, though.
 
 [extra]
-date = "Sep. 24, 2023"
+date = "Sep. 30, 2023"
 
 # Anything after this line is considered Markdown content
 

@@ -1,7 +1,7 @@
 title = "Your new blog"
 description = "All you need to know to get started with Bartholomew"
 template = "blog"
-date = "2021-12-23T17:05:19Z"
+date = "2023-09-30T10:05:19Z"
 
 ---
 

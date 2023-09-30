@@ -1,5 +1,5 @@
 title = "testing out the bart tool"
-date = "2023-09-24T17:59:33.844680Z"
+date = "2023-09-30T12:59:33.844680Z"
 template = "blog"
 tags = []
 
