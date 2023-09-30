@@ -1,0 +1,15 @@
+**/__temp/
+**/.DS_Store
+
+# spin, wasm, etc
+/.spin/
+/target/
+/modules/*.wasm
+
+# These should not be checked in because of the Bartholomew repo's license.
+/fileserver.gr.wasm
+/bartholomew.wasm
+
+/logs/
+/config/_cache.json
+**/node_modules/
