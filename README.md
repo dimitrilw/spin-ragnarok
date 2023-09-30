@@ -2,36 +2,39 @@
 
 Central learning repo for playing with Fermyon Spin.
 
-This repo was initialized via
-[Bartholomew](https://github.com/fermyon/bartholomew) (aka "Bart")
-using the baseline website template.
-It has been edited to include things needed for stand-alone APIs
-and other goodies, delivered by
-[Spin](https://github.com/fermyon/spin).
-Basically, I am using this repo as a dumping-ground for Spin-related experiments.
-I'm just goofing around here, making chaos. And just like "Thor: Ragnarok"
-may have reinvented the look-n-feel of the MCU, I believe that Spin may herald
-changes to the experience of building & deploying WASM cloud functions.
-
-In addition, I hope that my playtime with this repo will help ascend
-my Spin-skills, much like Thor's journey in the movie.
-
-Let Ragnarok begin!
-
-![Spin Ragnarok](static/spin-ragnarok.png)
+[![Spin Ragnarok](static/spin-ragnarok.png)](https://spin-ragnarok.fermyon.app/)
 
 (_See below re "Ragnarok Inspiration"_)
+
+This repo uses both
+[Bartholomew](https://github.com/fermyon/bartholomew) (aka "Bart") and
+[Spin](https://github.com/fermyon/spin). It was initialized via the
+[Bart site template](https://github.com/fermyon/bartholomew-site-template)
+as a baseline starter. The repo has been edited to include things needed
+for stand-alone APIs and other goodies, delivered by Spin.
+
+Basically, I am using this repo as a dumping-ground for Spin-related experiments.
+I'm just goofing around here, making chaos. And just like "Thor: Ragnarok"
+is often credited for reinventing the look-n-feel of the MCU, I believe that
+Spin is changing the experience of building & deploying WASM cloud functions.
+And thank goodness for that!
+
+In addition, I hope that my playtime with this repo will help ascend
+my Spin-skills, much like Thor's journey of ascension.
+
+Let Ragnarok begin!
 
 ## Directory Structure
 
 - `config/site.toml`: The main configuration file for the Bart site.
 - `content/`: Site content goes here, in the form of markdown files.
 - `scripts/` (advanced): Rhai scripts go here.
-- `spin.toml`: The configuration file for the Spin application.
+- `shortcodes/`: [Shortcodes](https://bartholomew.fermyon.dev/shortcodes) go here.
+- `src/`: Rust code for any "non-Bart" components, such as the `/api/*` endpoints.
 - `static/`: Static assets like images, CSS, and downloads go in here.
 - `templates/`: Handlebars templates go here.
-- `shortcodes/`: [Shortcodes](https://bartholomew.fermyon.dev/shortcodes) go here.
-- `src/`: Rust code for any "non-Bart" capabilities, such as the `/api/*` endpoints.
+- `themes/`: Bart themes go here.
+- `spin.toml`: The configuration file for the Spin application.
 
 ## Run Site
 
@@ -42,6 +45,14 @@ spin watch
 Now you can point your web browser to
 [http://localhost:3000/](http://localhost:3000/)
 to see your new Bartholomew site.
+
+## Deploy Site
+
+```sh
+spin deploy
+```
+
+The site is now live at [spin-ragnarok.fermyon.app](https://spin-ragnarok.fermyon.app/).
 
 ## Ragnarok Inspiration
 

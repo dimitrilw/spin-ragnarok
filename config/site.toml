@@ -1,0 +1,13 @@
+title = "some test site"
+# TODO: get image into template/theme/whatever
+logo = "static/spin-ragnarok.png"
+base_url = "http://localhost:3000"
+about = "This is a Bartholomew site. And this message is in config/site.toml, which I just edited."
+index_site_pages = ["blog"]
+
+[extra]
+copyright = "Dimitri LW"
+github = "https://github.com/dimitrilw/spin-ragnarok"
+# twitter = "https://twitter.com/fermyontech"
+
+date_style = "%B %e, %Y"

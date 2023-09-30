@@ -1,0 +1,46 @@
+name = "spin-ragnarok"
+version = "0.1.0"
+description = "Experimenting with a single repo using both Spin for API and Bartholomew for site"
+authors = ["Dimitri <5898931+dimitrilw@users.noreply.github.com>"]
+spin_version = "1"
+trigger = { type = "http", base = "/" }
+
+####################################################################################################
+# Spin API components
+
+[[component]]
+id = "spin-api"
+source = "target/wasm32-wasi/release/spin_hello_rs.wasm"
+allowed_http_hosts = []
+[component.trigger]
+route = "/api/..."
+[component.build]
+command = "cargo build --target wasm32-wasi --release"
+watch = ["src/**/*.rs", "Cargo.toml"]
+
+####################################################################################################
+# Bart site components
+
+[[component]]
+id = "bartholomew"
+files = [
+  "content/**/*",
+  "templates/**/*",
+  "scripts/*",
+  "config/*",
+  "shortcodes/*",
+]
+[component.source]
+url = "https://github.com/fermyon/bartholomew/releases/download/v0.6.0/bartholomew.wasm"
+digest = "sha256:b64bc17da4484ff7fee619ba543f077be69b3a1f037506e0eeee1fb020d42786"
+[component.trigger]
+route = "/..."
+
+[[component]]
+id = "fileserver"
+files = [{ source = "static/", destination = "/" }]
+[component.source]
+url = "https://github.com/fermyon/spin-fileserver/releases/download/v0.0.1/spin_static_fs.wasm"
+digest = "sha256:650376c33a0756b1a52cad7ca670f1126391b79050df0321407da9c741d32375"
+[component.trigger]
+route = "/static/..."
