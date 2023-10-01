@@ -6,7 +6,7 @@ use spin_sdk::{
 
 /// A simple Spin HTTP component.
 #[http_component]
-fn handle_spin_hello_rs(req: Request) -> Result<Response> {
+fn handle_api(req: Request) -> Result<Response> {
     println!("{:?}", req.headers());
     Ok(http::Response::builder()
         .status(200)

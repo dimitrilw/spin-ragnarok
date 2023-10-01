@@ -8,7 +8,7 @@
     just --list --unsorted
 
 # Run the app on localhost with hot-reloading.
-@watch:
+@dev:
     spin watch
 
 # Build the app for production.
